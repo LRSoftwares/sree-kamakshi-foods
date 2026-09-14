@@ -29,7 +29,7 @@ const features = [
   {
     icon: "📋",
     title: "Made Only After Ordering",
-    description: "No stale stock — your pickle is made just for you",
+    description: "No stale stock, your pickle is made just for you",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
             Why Choose <span className="text-primary">Sree Kamakshi Foods</span>?
           </h2>
           <p className="text-text-light max-w-2xl mx-auto">
-            We believe in delivering the purest, freshest homemade pickles —
+            We believe in delivering the purest, freshest homemade pickles,
             just like your grandmother used to make.
           </p>
         </div>

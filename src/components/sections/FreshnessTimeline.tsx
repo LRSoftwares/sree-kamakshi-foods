@@ -14,7 +14,7 @@ export default function FreshnessTimeline() {
             Our <span className="text-primary">Freshness</span> Promise
           </h2>
           <p className="text-text-light max-w-2xl mx-auto">
-            From the moment you order to the moment it reaches your table —
+            From the moment you order to the moment it reaches your table,
             every step is handled with care.
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function FreshnessTimeline() {
               ))}
             </div>
             <span className="font-semibold text-primary">
-              Prepared Today — Maximum Freshness
+              Prepared Today: Maximum Freshness
             </span>
           </div>
         </div>

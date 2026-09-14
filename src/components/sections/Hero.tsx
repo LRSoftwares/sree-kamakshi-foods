@@ -31,7 +31,7 @@ export default function Hero() {
 
             <p className="text-lg text-text-light mb-8 max-w-lg">
               Small-batch traditional recipes made only after your order is
-              confirmed. No preservatives, no shortcuts — just pure homemade
+              confirmed. No preservatives, no shortcuts, just pure homemade
               goodness.
             </p>
 

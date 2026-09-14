@@ -91,7 +91,7 @@ export default function Products() {
 
         <div className="mt-8 text-center">
           <p className="text-text-muted text-sm">
-            More varieties coming soon — Mango, Lemon, Tomato, Garlic, Amla &
+            More varieties coming soon: Mango, Lemon, Tomato, Garlic, Amla &
             more!
           </p>
         </div>

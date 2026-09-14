@@ -1,7 +1,7 @@
 import Sidebar from "@/components/admin/Sidebar";
 
 export const metadata = {
-  title: "Admin — Sree Kamakshi Foods",
+  title: "Admin | Sree Kamakshi Foods",
   description: "Admin panel for Sree Kamakshi Foods",
 };
 

@@ -3,8 +3,8 @@ import { Product, Testimonial, FAQItem, DeliverySettings } from "@/types";
 export const BRAND = {
   name: "Sree Kamakshi Foods",
   tagline: "Homemade with Love. Prepared Fresh on Order.",
-  phone: "+91 9876543210",
-  whatsapp: "+91 9876543210",
+  phone: "+91 9840044268",
+  whatsapp: "+91 9840044268",
   email: "info@sreekamakshifoods.com",
   instagram: "sreekamakshifoods",
 } as const;
@@ -25,9 +25,9 @@ export const PRODUCTS: Product[] = [
       "Traditional Andhra Gongura Pickle made using handpicked Gongura leaves, premium spices, and fresh ingredients.",
     image: "/images/gongura-pickle.jpg",
     sizes: [
-      { weight: "250g", price: 180, serving: "2–3 People" },
-      { weight: "500g", price: 320, serving: "4–6 People" },
-      { weight: "1kg", price: 600, serving: "Large Families" },
+      { weight: "250g", price: 300, serving: "2–3 People" },
+      { weight: "500g", price: 600, serving: "4–6 People" },
+      { weight: "1kg", price: 850, serving: "Large Families" },
     ],
     options: {
       garlic: true,
@@ -96,7 +96,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "3",
     name: "Priya Sharma",
     rating: 5,
-    text: "Ordered for my family in Hyderabad. They loved it! Will order again soon.",
+    text: "Ordered for my family in Chennai. They loved it! Will order again soon.",
     date: "2026-06-01",
   },
   {
@@ -142,9 +142,9 @@ export const FAQ_ITEMS: FAQItem[] = [
 ];
 
 export const DELIVERY_SETTINGS: DeliverySettings = {
-  office_address: "Hyderabad, Telangana",
-  office_lat: 17.385,
-  office_lng: 78.4867,
+  office_address: "Chennai, Tamil Nadu",
+  office_lat: 13.0827,
+  office_lng: 80.2707,
   pickup_timings: "10:00 AM – 7:00 PM",
   default_radius_km: 25,
 };

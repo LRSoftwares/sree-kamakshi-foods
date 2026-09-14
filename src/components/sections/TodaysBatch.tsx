@@ -120,7 +120,7 @@ export default function TodaysBatch() {
                   href="#order"
                   className="mt-6 block w-full bg-primary text-white text-center py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors shadow-md"
                 >
-                  Order Now — {remaining} Slots Left
+                  Order Now: {remaining} Slots Left
                 </a>
               </>
             ) : (
@@ -132,7 +132,7 @@ export default function TodaysBatch() {
                   Next batch opens tomorrow at 8:00 AM
                 </p>
                 <a
-                  href={`https://wa.me/919876543210?text=Hi, I'd like to pre-order for tomorrow's batch`}
+                  href={`https://wa.me/919840044268?text=Hi, I'd like to pre-order for tomorrow's batch`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-block bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1da851] transition-colors"

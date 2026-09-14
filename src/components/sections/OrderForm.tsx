@@ -148,7 +148,7 @@ export default function OrderForm() {
                 Order Again
               </button>
               <a
-                href={`https://wa.me/919876543210?text=Hi, I just placed order ${batchId}. Please confirm.`}
+                href={`https://wa.me/919840044268?text=Hi, I just placed order ${batchId}. Please confirm.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-[#25D366] text-white py-3 rounded-full font-semibold hover:bg-[#1da851] transition-colors text-center"
@@ -513,7 +513,7 @@ export default function OrderForm() {
                         {
                           value: "pickup",
                           label: "Self Pickup",
-                          desc: "Pick up from our kitchen — Free!",
+                          desc: "Pick up from our kitchen: Free!",
                           icon: "🏠",
                         },
                         {
@@ -693,7 +693,7 @@ export default function OrderForm() {
                       onClick={handleSubmit}
                       className="flex-1 bg-accent text-white py-3 rounded-full font-semibold hover:bg-red-700 transition-colors shadow-md"
                     >
-                      Place Order — {formatCurrency(total)}
+                      Place Order: {formatCurrency(total)}
                     </button>
                   </div>
                 </div>
