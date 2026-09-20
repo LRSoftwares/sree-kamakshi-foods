@@ -91,8 +91,10 @@ export default function Products() {
 
         <div className="mt-8 text-center">
           <p className="text-text-muted text-sm">
-            More varieties coming soon: Mango, Lemon, Tomato, Garlic, Amla &
-            more!
+            More varieties coming soon: Ginger, Tomato, Amla, Lemon, Mango,
+            Maagai, Pandu Mirchi, Red Chilli Gongura, Raw Tamarind, Red Chilli
+            Chintakai, and podis: Andhra Kandhi, Palli, Andhra Senaga, Nalla
+            Karam & Nuvvula.
           </p>
         </div>
       </div>
