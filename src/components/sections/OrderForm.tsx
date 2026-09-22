@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PRODUCTS, DELIVERY_SETTINGS } from "@/lib/constants";
+import { PRODUCTS, DELIVERY_SETTINGS, BRAND } from "@/lib/constants";
 import {
   formatCurrency,
   getDeliveryRecommendation,
@@ -95,10 +95,84 @@ export default function OrderForm() {
     );
   };
 
+  const buildOrderMessage = (orderId: string) => {
+    const deliveryLabel =
+      form.deliveryMethod === "pickup"
+        ? "Self Pickup"
+        : form.deliveryMethod === "rapido"
+          ? "Rapido Parcel"
+          : "Uber Package";
+
+    const lines = [
+      `New Order: ${orderId}`,
+      "",
+      `Product: ${selectedProduct?.name} (${form.size}) x${form.quantity}`,
+      selectedProduct?.options.garlic
+        ? `Garlic: ${form.garlic === "with" ? "With Garlic" : "Without Garlic"}`
+        : null,
+      `Spice Level: ${form.spiceLevel}`,
+      `Oil Preference: ${form.oilPreference}`,
+      "",
+      `Customer: ${form.name}`,
+      `Phone: ${form.phone}`,
+      `WhatsApp: ${form.whatsapp}`,
+      form.email ? `Email: ${form.email}` : null,
+      "",
+      `Delivery Method: ${deliveryLabel}`,
+      form.deliveryMethod !== "pickup"
+        ? `Delivery Cost: ${formatCurrency(deliveryCost)}`
+        : null,
+      `Address: ${
+        form.deliveryMethod === "pickup"
+          ? `${DELIVERY_SETTINGS.office_address} (Pickup)`
+          : form.address
+      }`,
+      form.needByDate ? `Need By: ${form.needByDate}` : null,
+      form.specialInstructions
+        ? `Special Instructions: ${form.specialInstructions}`
+        : null,
+      "",
+      `Payment Method: ${form.paymentMethod}`,
+      `Total: ${formatCurrency(total)}`,
+    ];
+
+    return lines.filter((line) => line !== null).join("\n");
+  };
+
   const handleSubmit = () => {
     const id = generateBatchId();
     setBatchId(id);
     setSubmitted(true);
+
+    const promoterNumber = BRAND.whatsapp.replace(/[^0-9]/g, "");
+    const message = buildOrderMessage(id);
+    window.open(
+      `https://wa.me/${promoterNumber}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+
+    fetch("/api/orders", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderId: id,
+        name: form.name,
+        phone: form.phone,
+        whatsapp: form.whatsapp,
+        email: form.email,
+        address: form.address,
+        productId: form.productId,
+        productName: selectedProduct?.name,
+        size: form.size,
+        quantity: form.quantity,
+        garlic: form.garlic,
+        spiceLevel: form.spiceLevel,
+        oilPreference: form.oilPreference,
+        deliveryMethod: form.deliveryMethod,
+        deliveryCost,
+        total,
+      }),
+    }).catch(() => {});
   };
 
   if (submitted) {

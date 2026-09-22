@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json();
-  const orderId = generateBatchId();
+  const orderId = body.orderId || generateBatchId();
   const now = new Date().toISOString();
 
   const row = [
